@@ -5,7 +5,9 @@ import Particles from "react-tsparticles";
 class Background extends React.Component {
 	constructor(props) {
 		super(props);
-		this.state = {}
+		this.state = {
+			//hi
+		}
 
 	}
 
