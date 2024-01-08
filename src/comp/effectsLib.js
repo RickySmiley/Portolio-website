@@ -11,10 +11,10 @@ class Background extends React.Component {
 
 	render() {
 		const {numOfParticles, particleColor, lineColor} = this.props;
-		console.log("rendering background");
+		console.log("rendering ");
 		
 
-		const options = {
+		let options = {
 			particles: {
 				number: {
 					value: 80,
