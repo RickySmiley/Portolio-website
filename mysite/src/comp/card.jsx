@@ -4,13 +4,14 @@ import {Paper, Button, Slide, Card, Box, Container, CardHeader} from '@mui/mater
 import Typography from '@mui/material/Typography';
 import {useState} from "react";
 import CardMedia from '@mui/material/CardMedia';
+import pic from '/Users/rickyzermeno/projects/mysite/src/comp/media/luc.png';
 
 
 const slide = [
 	{
 		title: 'About Me',
 		content: 'This is something',
-		media: 'src/luc.png'
+		media: pic
 	},
 	{
 		title: 'Second slide',
@@ -50,22 +51,18 @@ const slide = [
 						{slide.map((slide, index) => (
 							<Card key={index}  >
 								<Paper sx={{ borderRadius: "30px" }} elevation={3}>
-									<Box>
-									<Typography color={'secondary'} gutterBottom={true} variant="h3">
-										{slide.title}
-									</Typography>
-								</Box>
-								<Box sx={{ bgcolor: 'rgba(72,159,255,0.41)', p:2, height: '50vh', borderRadius: '2px' }}>
+								<Box sx={{ bgcolor: 'rgb(225,161,94)', p:2, height: '50vh', borderRadius: '2px' }}>
 									<Typography paragraph={true} variant="body2">
 										{slide.content}
 									</Typography>
+									<CardMedia
+										component={'img'}
+										image={ slide.media ? slide.media : '' }
+										sx={{ height: 500 }}>
+									</CardMedia>
 								</Box>
 
 								</Paper>
-								<CardMedia
-									image={ '/Users/rickyzermeno/projects/mysite/src/luc.png' }
-									sx={{ height: 140 }}>
-								</CardMedia>
 							</Card>
 						))}
 				</Carousel>
