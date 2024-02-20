@@ -1,0 +1,48 @@
+.header h1 {
+    font-size: 70px;
+    font-weight: 600;
+    background-image: linear-gradient(to left, rgba(236, 17, 108, 0.65), rgba(8, 8, 200, 0.73));
+    color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text;
+    text-align: center;
+}
+
+.card-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 100px;
+
+}
+
+.card-content {
+    margin-top: 15px;
+}
+
+.card-title {
+    font-size: 1.5rem;
+    margin-bottom: 8px;
+}
+
+.card-text {
+    font-size: 1rem;
+    color: #555;
+}
+
+.card-list {
+    display: flex;
+    position: relative;
+    overflow-x: auto; /* Enable horizontal scrolling */
+    padding: 10px; /* Add some padding for spacing */
+    /*white-space: nowrap;*/
+    justify-content: center;
+    backface-visibility: visible;
+
+}
+
+
+.container {
+    position: relative;
+
+}
+
