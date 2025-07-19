@@ -22,7 +22,7 @@ const Background = (props) => {
 					// value: ["rgba(255,255,255,0.96)"]
 				},
 				lineLinked: {
-					// enable: true,
+					enable: false,
 					distance: 400,
 					color: {
 						// value: ["#08ff00", "#FF0061", "#e88a2a"]

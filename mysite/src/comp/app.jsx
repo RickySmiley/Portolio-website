@@ -1,5 +1,4 @@
-import Greet from "./heading"
-import Background from "./effectsLib";
+ import Background from "./effectsLib";
 import "./stylers/app.css"
 import Slideshow from "./card";
 
@@ -9,9 +8,6 @@ function App() {
 			<div className={"body"}>
 			<Background id={"tsparticles"}/>
 		</div>
-			<div >
-				<Greet/>
-			</div>
 			<div>
 				<Slideshow/>
 			</div>
