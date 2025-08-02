@@ -4,7 +4,7 @@ import Slideshow from "./card";
 
 function App() {
 	return (
-		<div className={"container"} >
+		<div >
 			<div className={"body"}>
 			<Background id={"tsparticles"}/>
 		</div>

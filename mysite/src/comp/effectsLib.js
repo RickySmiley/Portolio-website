@@ -3,8 +3,8 @@ import Particles from "react-tsparticles";
 import {loadFull} from 'tsparticles';
 
 const Background = (props) => {
-	const options = useMemo(() => {
-		return {
+	const options = useMemo(() => ({
+
 			fullScreen: {
 				zIndex: -1,
 				enable: true
@@ -15,26 +15,31 @@ const Background = (props) => {
 					value: 200,
 				},
 				size: {
-					value: 0.1,
+					value: 2.5,
 				},
 				color: {
-					value: [ "#FF0061", "#00ff22", "#8c00ff"],
-					// value: ["rgba(255,255,255,0.96)"]
+					value: [ "#FF0061", "#f6540e", "#ff0008"],
+					animation: {
+						enable: true,
+						speed: 20,
+						sync: false,
+					}
 				},
-				lineLinked: {
-					enable: false,
-					distance: 400,
+				links: {
+					enable: true,
 					color: {
-						// value: ["#08ff00", "#FF0061", "#e88a2a"]
-						value: ["#897f7f"]
+						value:  ["#FF0061"],
 					},
 
-					opacity: 0.9,
-					width: 0.5,
 				},
 				move: {
 					enable: true,
-					speed: 2,
+					speed: 5,
+					parallax: {
+						enable: true,
+						smooth: 10,
+						force: 60,
+					}
 				},
 			},
 			destroyed: true,
@@ -44,21 +49,25 @@ const Background = (props) => {
 						enable: true,
 						mode: 'grab',
 					},
+					onClick: {
+						enable: true,
+						mode: 'repulse',
+					}
 				},
 				modes: {
-					grab: {
-						distance: 150,
-						lineLinked: {
-							opacity: 1,
-						},
-					},
 					repulse: {
-						distance: 90,
-						duration: 0.4,
+						distance: 250,
+						duration: 1,
 					},
+					grab:{
+						distance: 100,
+						links: {
+							opacity: 1
+						}
+					}
 				},
 			}
-		}}, []);
+		}), []);
 
 
 	const particleInit = useCallback(async (engine) => {
